@@ -1,12 +1,38 @@
+package jogadores;
+
 import java.util.ArrayList;
 
 public abstract class Jogador {
     protected String cor;
     protected int posicao;
+    protected int moedas;
     protected boolean jogaProximoTurno;
+    protected boolean ganharaMoedas = false;
     protected int quantidadeDeJogadas;
+    protected ArrayList<String> itens = new ArrayList<String>();
 
 
+    public boolean isGanharaMoedas() {
+        return ganharaMoedas;
+    }
+
+    public void setGanharaMoedas(boolean ganharaMoedas) {
+        this.ganharaMoedas = ganharaMoedas;
+    }
+
+    public ArrayList<String> getItens() {
+        return itens;
+    }
+
+    public int getMoedas() {
+        return moedas;
+    }
+    public void setMoedas(int moedas) {
+        this.moedas = moedas;
+    }
+    public void setQuantidadeDeJogadas(int quantidadeDeJogadas) {
+        this.quantidadeDeJogadas = quantidadeDeJogadas;
+    }
     public int getQuantidadeDeJogadas() {
         return quantidadeDeJogadas;
     }
@@ -39,14 +65,9 @@ public abstract class Jogador {
         this.cor = cor;
         this.posicao = 0;
         this.jogaProximoTurno = true;
+        this.ganharaMoedas = false;
         this.quantidadeDeJogadas = 0;
-    }
-
-    public Jogador(String cor, int posicao, int quantidadeDeJogadas){
-        this.cor = cor;
-        this.posicao = posicao;
-        this.jogaProximoTurno = true;
-        this.quantidadeDeJogadas = quantidadeDeJogadas;
+        this.moedas = 0;
     }
 
     public void aumentarQuantidadeDeJogadas(){

@@ -1,13 +1,11 @@
+package jogadores;
+
 import java.util.ArrayList;
 
 public class JogadorComSorte extends Jogador{
 
     public JogadorComSorte(String cor){
         super(cor);
-    }
-
-    public JogadorComSorte(String cor, int posicao, int quantidadeDeJogadas){
-        super(cor, posicao, quantidadeDeJogadas);
     }
 
     @Override
