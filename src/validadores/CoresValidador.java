@@ -30,5 +30,8 @@ public class CoresValidador implements Validador {
                 throw new InvalidUserInputException();
             }
         }
+        if (userInput.isEmpty()) {
+            throw new InvalidUserInputException();
+        }
     }
 }

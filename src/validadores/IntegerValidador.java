@@ -56,5 +56,8 @@ public class IntegerValidador implements Validador {
                 throw new InvalidUserInputException();
             }
         }
+        if (userInput.isEmpty()) {
+            throw new InvalidUserInputException();
+        }
     }
 }

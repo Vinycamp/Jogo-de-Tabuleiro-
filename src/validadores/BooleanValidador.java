@@ -25,5 +25,8 @@ public class BooleanValidador implements Validador {
                 throw new InvalidUserInputException();
             }
         }
+        if (userInput.isEmpty()) {
+            throw new InvalidUserInputException();
+        }
     }
 }
